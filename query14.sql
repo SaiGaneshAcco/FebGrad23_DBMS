@@ -1,0 +1,1 @@
+select s.student_roll_no,s.student_name , d.student_marks_percentage from student.student_basic_information as s, student_subject_information as d where s.student_roll_no=d.student_roll_no and d.student_roll_no in (select  k.student_roll_no from student.student_subject_information as k) order by d.student_marks_percentage desc limit 5;

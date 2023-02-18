@@ -1,0 +1,2 @@
+-- Select the students who opted for scholarship but has not got the scholarship 
+select student_roll_no,student_name from student.student_basic_information where student_roll_no not in (select student_roll_number from  student.student_scholarship_information); 

@@ -1,0 +1,2 @@
+-- Select the student details records who has received the scholarship more than 5000Rs/
+select * from student.student_basic_information where student_basic_information.student_roll_no in (select student_roll_number from  student.student_scholarship_information  where student_scholarship_information.scholarship_amount>5000); 
